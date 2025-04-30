@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Tabs Project</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="title">
+        <h1>Simple Tabs Project</h1>
+    </div>
+
+    <div class="subTitle">
+        <p>This is my Simple Tabs Project from <a target="_blank" href="https://roadmap.sh/">Roadmap</a>.</p>
+    </div>
+
+    <div class="tab-container">
+        <div class="tab-buttons">
+            <button class="tab active" onclick="showTab(0)">First Tab</button>
+            <button class="tab" onclick="showTab(1)">Second Tab</button>
+            <button class="tab" onclick="showTab(2)">Third Tab</button>
+            <button class="tab" onclick="showTab(3)">Fourth Tab</button>
+        </div>
+
+        <div class="tab-content">
+            <div class="content active">First Tab content to be displayed here.</div>
+            <div class="content">Second Tab content to be displayed here.</div>
+            <div class="content">Third Tab content to be displayed here.</div>
+            <div class="content">Fourth Tab content to be displayed here.</div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
