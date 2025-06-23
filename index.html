@@ -6,32 +6,21 @@
     <title>Simple Tabs Project</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-    <div class="title">
-        <h1>Simple Tabs Project</h1>
-    </div>
-
-    <div class="subTitle">
-        <p>This is my Simple Tabs Project from <a target="_blank" href="https://roadmap.sh/">Roadmap</a>.</p>
-    </div>
-
-    <div class="tab-container">
-        <div class="tab-buttons">
-            <button class="tab active" onclick="showTab(0)">First Tab</button>
-            <button class="tab" onclick="showTab(1)">Second Tab</button>
-            <button class="tab" onclick="showTab(2)">Third Tab</button>
-            <button class="tab" onclick="showTab(3)">Fourth Tab</button>
+    <div class="container">
+        <div class="tabs-container">
+            <p class="tab active">First Tab</p>
+            <p class="tab">Second Tab</p>
+            <p class="tab">Third Tab</p>
+            <p class="tab">Fourth Tab</p>
         </div>
 
-        <div class="tab-content">
-            <div class="content active">First Tab content to be displayed here.</div>
-            <div class="content">Second Tab content to be displayed here.</div>
-            <div class="content">Third Tab content to be displayed here.</div>
-            <div class="content">Fourth Tab content to be displayed here.</div>
+        <div class="content">
+            <p class="content-text">This is the content of the First tab: Lorem, ipsum dolor sit amet consectetur adipisicing elit. Excepturi, architecto!</p>
         </div>
     </div>
 
     <script src="script.js"></script>
 </body>
 </html>
+
