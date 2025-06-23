@@ -1,81 +1,106 @@
-/* Reseting margins and paddings */
+/* Import Google Fonts for better typography */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&display=swap');
+
+/* Reset and base styles for all elements */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-wrap: break-word;       /* Prevent text overflow */
+}
 
 body {
-    background-color: dimgray;
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-    padding: 3rem;
+  background-color: #173842;
+  font-family: 'Poppins', 'Roboto', sans-serif;
+  color: #eeeeee;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
 }
 
-.title {
-    padding-bottom: 3rem;
+.container {
+  display: flex;
+  flex-direction: column;
+  background-color: #122e36;
+  border: 2px solid black;
+  border-radius: 10px;
+  max-width: 35rem;
+  min-width: 6rem;
+  padding: 1rem;
+  gap: 1rem;
 }
 
-.subTitle {
-    font-size: 1.48em;
+.tabs-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.3rem;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-a {
-    color: #000;
-    text-decoration: none;
-    font-weight: bold;
-    font-style: italic;
-}
-
-a:hover {
-    color: #252525;
-    text-decoration: underline;
-    transition-duration: 0.8s;
-}
-
-.tab-container {
-    border: 2px solid #000;
-    padding: 1rem;
-    border-radius: 10px;
-    font-family: sans-serif;
-    background-color: #fff;
-    max-width: 600px;
-    margin: 2rem auto;
-  }
-  
-  .tab-buttons {
-    display: block;
-    margin-bottom: 1rem;
-  }
-  
+@media (max-width: 485px) {
   .tab {
-    background: none;
-    border: none;
-    font-size: 1rem;
-    padding: 0.5rem 1.5rem;
-    cursor: pointer;
-    color: #666666;
-    border-bottom: 2px solid transparent;
+    flex: 45%;
   }
-  
-  .tab.active {
-    color: #000;
-    border-bottom: 2px solid #000;
-    font-weight: bold;
+}
+
+.tab {
+  cursor: pointer;
+  transition: font-size 0.3s ease;
+  position: relative;
+}
+
+.tab.active {
+  font-size: 20px
+}
+
+.tab::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: black;
+  transition: width 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.tab.active::after {
+  width: 100%;
+}
+
+.content {
+  background-color: rgb(0, 0, 0);
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
   }
-  
-  .tab-content .content {
-    display: none;
-    background-color: black;
-    color: white;
-    padding: 1.5rem;
-    border-radius: 10px;
-    margin-bottom: 1rem;
-    font-size: 1rem;
-    text-align: center;
+  to {
+    opacity: 1;
   }
-  
-  .tab-content .content.active {
-    display: block;
+}
+
+.fade {
+  animation: fadeIn 0.5s ease;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: scale(0);
   }
-  
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.appear {
+  animation: appear 0.4s ease;
+}
